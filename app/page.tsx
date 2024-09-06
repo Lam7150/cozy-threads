@@ -1,4 +1,5 @@
 import { Navbar } from '@/components/landing/Navbar';
+import { fetchProducts } from '@/utils/api';
 
 export default function Home() {
   return (

@@ -1,14 +1,12 @@
-import { PRODUCTS } from '@/utils/consts/consts.products';
-
 // MOCK API ENDPOINT USING JSON DB
 const fetchProducts = async () => {
-  const response = PRODUCTS;
+  const response = await fetch(`./consts/consts.products.json`, {});
 
-  if (!response) {
+  if (!response.ok) {
     throw new Error('A network error occurred');
   }
 
-  return PRODUCTS;
+  return response.json();
 };
 
 export { fetchProducts };
