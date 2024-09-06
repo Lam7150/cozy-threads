@@ -1,11 +1,11 @@
 import { Navbar } from '@/components/landing/Navbar';
 
-export default function Home() {
+export default function Cart() {
   return (
     <>
       <Navbar />
       <main className="container grid place-items-center">
-        <div>hello, world</div>
+        <div>cart page</div>
       </main>
     </>
   );
