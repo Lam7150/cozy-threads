@@ -33,7 +33,7 @@ export function ProductGallery() {
 
   return (
     <>
-      <div className="grid grid-cols-4 auto-rows-fr gap-4">
+      <div className="grid grid-cols-1 auto-rows-fr gap-4 sm:grid-cols-2 md:grid-cols-4">
         {products?.map((product) => (
           <ProductCard
             key={product.id}

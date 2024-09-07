@@ -14,6 +14,7 @@ import {
   SheetTitle
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
+import { FaCartShopping } from 'react-icons/fa6';
 
 // Types
 import type { Product } from '@/utils/types';
@@ -43,11 +44,11 @@ export function ProductSheet({ product, open, setOpen }: ProductSheetProps) {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetContent className="w-[400px] sm:w-[540px] sm:max-w-[100vw]">
+      <SheetContent className="w-[400px] sm:w-[540px] sm:max-w-[100vw] overflow-y-scroll">
         <SheetHeader>
           <SheetTitle>{title}</SheetTitle>
         </SheetHeader>
-        <div className="mt-6 space-y-6">
+        <div className="flex flex-col gap-1 mt-6 space-y-6">
           <div className="relative w-full aspect-square">
             <Image
               src={image}
@@ -60,12 +61,12 @@ export function ProductSheet({ product, open, setOpen }: ProductSheetProps) {
             />
           </div>
           <div>
-            <h3 className="mb-2 text-lg font-semibold">Description</h3>
+            <h3 className="text-lg font-semibold">Description</h3>
             <p className="text-sm text-gray-600">{description}</p>
           </div>
           <div>
-            <h3 className="mb-2 text-lg font-semibold">Price</h3>
-            <p className="text-2xl font-bold text-green-600">{price}</p>
+            <h3 className="text-lg font-semibold">Price</h3>
+            <p className="text-xl font-bold text-primary">{price}</p>
           </div>
           <div>
             <h3 className="mb-2 text-lg font-semibold">Quantity</h3>
@@ -77,7 +78,8 @@ export function ProductSheet({ product, open, setOpen }: ProductSheetProps) {
               className="w-20"
             />
           </div>
-          <Button className="w-full" onClick={addItemToCart}>
+          <Button className="gap-2 w-full" onClick={addItemToCart}>
+            <FaCartShopping />
             Add to Cart
           </Button>
         </div>

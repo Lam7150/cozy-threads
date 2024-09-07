@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { FaCartShopping } from 'react-icons/fa6';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   NavigationMenu,
@@ -38,10 +40,19 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container flex justify-between px-6 w-screen h-14">
           <NavigationMenuItem className="flex font-bold">
+            <Image
+              src="/cozy_threads.png"
+              alt={`cozy threads logo`}
+              sizes="10vw"
+              layout="fit"
+              objectFit="cover"
+              width={64}
+              height={64}
+            />
             <Link
               rel="noreferrer noopener"
               href="/"
-              className="flex ml-2 text-xl font-bold"
+              className="flex self-center text-xl font-bold text-secondary"
             >
               Cozy Threads
             </Link>
@@ -58,8 +69,8 @@ export const Navbar = () => {
 
               <SheetContent side={'left'}>
                 <SheetHeader>
-                  <SheetTitle className="text-xl font-bold">
-                    Shadcn/React
+                  <SheetTitle className="text-xl font-bold text-secondary">
+                    Cozy Threads
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col gap-2 justify-center items-center mt-4">
@@ -69,9 +80,12 @@ export const Navbar = () => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: 'ghost' })}
+                      className={`${buttonVariants({ variant: 'ghost' })} text-secondary`}
                     >
-                      {label}
+                      <span className="flex flex-row gap-1.5 items-center text-lg">
+                        {label === 'Cart' ? <FaCartShopping /> : null}
+                        {label}
+                      </span>
                     </Link>
                   ))}
                 </nav>
@@ -86,9 +100,12 @@ export const Navbar = () => {
                 rel="noreferrer noopener"
                 href={route.href}
                 key={i}
-                className={`text-[17px] ${buttonVariants({ variant: 'ghost' })}`}
+                className={`${buttonVariants({ variant: 'ghost' })} text-secondary`}
               >
-                {route.label}
+                <span className="flex flex-row gap-1.5 items-center text-lg">
+                  {route.label === 'Cart' ? <FaCartShopping /> : null}
+                  {route.label}
+                </span>
               </Link>
             ))}
           </nav>

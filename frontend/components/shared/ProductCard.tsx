@@ -30,7 +30,7 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
       <CardContent className="p-4">
         <h2 className="mb-2 text-xl font-semibold">{title}</h2>
         <p className="mb-4 text-sm text-gray-600">{description}</p>
-        <p className="text-lg font-bold text-green-400">{price}</p>
+        <p className="text-lg font-bold text-primary">{price}</p>
       </CardContent>
     </Card>
   );
