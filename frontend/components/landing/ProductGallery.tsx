@@ -6,8 +6,8 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '@/utils/api';
 
 // Components
-import { ProductCard } from '@/components/shared/ProductCard';
-import { ProductSheet } from '@/components/shared/ProductSheet';
+import { ProductCard } from '@/frontend/components/shared/ProductCard';
+import { ProductSheet } from '@/frontend/components/shared/ProductSheet';
 
 // Types
 import { Product } from '@/utils/types';
@@ -36,6 +36,7 @@ export function ProductGallery() {
       <div className="grid grid-cols-4 auto-rows-fr gap-4">
         {products?.map((product) => (
           <ProductCard
+            key={product.id}
             product={product}
             onClick={() => onProductSelect(product)}
           />

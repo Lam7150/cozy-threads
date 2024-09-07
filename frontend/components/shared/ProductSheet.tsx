@@ -2,18 +2,18 @@
 
 // Libraries
 import { useState } from 'react';
-import { useCart } from '@/components/contexts/cart/useCart';
+import { useCart } from '@/frontend/components/contexts/cart/useCart';
 
 // Components
 import Image from 'next/image';
-import { Input } from '@/components/ui/input';
+import { Input } from '@/frontend/components/ui/input';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle
-} from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
+} from '@/frontend/components/ui/sheet';
+import { Button } from '@/frontend/components/ui/button';
 
 // Types
 import type { Product } from '@/utils/types';
@@ -25,10 +25,10 @@ interface ProductSheetProps {
 }
 
 export function ProductSheet({ product, open, setOpen }: ProductSheetProps) {
-  if (!product) return null;
-
   const [quantity, setQuantity] = useState<number>(1);
   const { addItem } = useCart();
+
+  if (!product) return null;
 
   const { title, description, image, price } = product;
 

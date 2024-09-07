@@ -1,12 +1,12 @@
 'use client';
 
 // Libraries
-import { useCart } from '@/components/contexts/cart/useCart';
+import { useCart } from '@/frontend/components/contexts/cart/useCart';
 
 // Components
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '@/frontend/components/ui/button';
+import { Input } from '@/frontend/components/ui/input';
 import {
   Table,
   TableBody,
@@ -14,9 +14,9 @@ import {
   TableHead,
   TableHeader,
   TableRow
-} from '@/components/ui/table';
+} from '@/frontend/components/ui/table';
 import { Trash2 } from 'lucide-react';
-import { Navbar } from '@/components/landing/Navbar';
+import { Navbar } from '@/frontend/components/landing/Navbar';
 
 export default function Cart() {
   const { cart, updateItem, deleteItem } = useCart();

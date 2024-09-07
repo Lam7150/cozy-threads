@@ -6,16 +6,16 @@ import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList
-} from '@/components/ui/navigation-menu';
+} from '@/frontend/components/ui/navigation-menu';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger
-} from '@/components/ui/sheet';
+} from '@/frontend/components/ui/sheet';
 
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/frontend/components/ui/button';
 import { Menu } from 'lucide-react';
 
 interface RouteProps {

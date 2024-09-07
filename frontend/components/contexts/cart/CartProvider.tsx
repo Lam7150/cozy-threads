@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-import { CartContext } from '@/components/contexts/cart/CartContext';
+import { CartContext } from '@/frontend/components/contexts/cart/CartContext';
 import { Product } from '@/utils/types';
 
 type PropsWithChildren = {

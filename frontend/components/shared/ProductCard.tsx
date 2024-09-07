@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/frontend/components/ui/card';
 import type { Product } from '@/utils/types';
 
 interface ProductCardProps {
