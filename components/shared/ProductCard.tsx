@@ -1,20 +1,29 @@
+import { MouseEventHandler } from 'react';
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import type { Product } from '@/utils/types';
 
 interface ProductCardProps {
   product: Product;
+  onClick: MouseEventHandler<HTMLDivElement> | undefined;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, onClick }: ProductCardProps) {
   const { image, title, description, price } = product;
 
   return (
-    <Card className="overflow-hidden w-full max-w-sm">
+    <Card
+      className="overflow-hidden w-full max-w-sm hover:cursor-pointer"
+      onClick={onClick}
+    >
       <div className="relative aspect-square">
-        <img
+        <Image
           src={image}
           alt="Product Image"
-          className="object-cover transition-transform hover:scale-105"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="top"
+          className="transition-transform hover:scale-105"
         />
       </div>
       <CardContent className="p-4">

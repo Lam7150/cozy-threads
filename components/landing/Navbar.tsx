@@ -35,7 +35,7 @@ export const Navbar = () => {
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container flex justify-between px-4 w-screen max-w-6xl h-14">
+        <NavigationMenuList className="container flex justify-between px-6 w-screen h-14">
           <NavigationMenuItem className="flex font-bold">
             <a
               rel="noreferrer noopener"

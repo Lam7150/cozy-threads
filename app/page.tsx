@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Navbar />
       <QueryClientProvider client={queryClient}>
-        <main className="container grid place-items-center">
+        <main className="container grid place-items-center py-4">
           <ProductGallery />
         </main>
       </QueryClientProvider>
