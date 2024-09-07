@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Washable Knit Ribbed Pants",
+    "price": 29.95,
+    "quantity": 100,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/470173/item/usgoods_65_470173_3x4.jpg",
+    "description": "Wide waistband and outer drawstring for a streamlined waist."
+  },
+  {
+    "id": 2,
+    "title": "Mini Short-Sleeve T-Shirt",
+    "price": 14.95,
+    "quantity": 75,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/465760/item/usgoods_10_465760_3x4.jpg",
+    "description": "A compact fit with a slightly short length for easy styling with relaxed bottoms."
+  },
+  {
+    "id": 3,
+    "title": "KAWS + Warhol UT Graphic T-Shirt",
+    "price": 24.95,
+    "quantity": 50,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/476350/item/usgoods_00_476350_3x4.jpg",
+    "description": "A unique collaboration has come to life between Andy Warhol, and KAWS, a leading artist in contemporary art. "
+  },
+  {
+    "id": 4,
+    "title": "Milano Ribbed Shirt Collar Cardigan",
+    "price": 59.95,
+    "quantity": 30,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/471136/item/usgoods_09_471136_3x4.jpg",
+    "description": "Cardigan with no ribbing for a sleek look and easy layering."
+  },
+  {
+    "id": 5,
+    "title": "Ultra Stretch AIRism Cropped T-Shirt",
+    "price": 19.95,
+    "quantity": 60,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/465762/item/usgoods_58_465762_3x4.jpg",
+    "description": "AIRism keeps you fresh and comfortable when you sweat."
+  },
+  {
+    "id": 6,
+    "title": "Windproof Stand Blouson",
+    "price": 69.95,
+    "quantity": 50,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/464918/item/usgoods_38_464918_3x4.jpg",
+    "description": "Functional outerwear that protects you from wind."
+  },
+  {
+    "id": 7,
+    "title": "Ribbed Cropped Sleeveless Bra Top",
+    "price": 19.95,
+    "quantity": 80,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/464427/item/usgoods_38_464427_3x4.jpg",
+    "description": "Pairs with high-waisted bottoms to show off some skin for an active, healthy style."
+  },
+  {
+    "id": 8,
+    "title": "Pleated Wide Pants",
+    "price": 49.95,
+    "quantity": 70,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/460311/item/usgoods_69_460311_3x4.jpg",
+    "description": "Elegant tucks and center creases allow versatile styling options."
+  },
+  {
+    "id": 9,
+    "title": "Ultra Stretch AIRism Cropped T-Shirt | Long Sleeve",
+    "price": 29.95,
+    "quantity": 55,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/475335/item/usgoods_58_475335_3x4.jpg",
+    "description": "Soft and smooth Ultra Stretch fabric for non-constrictive comfort."
+  },
+  {
+    "id": 10,
+    "title": "Souffle V-Neck Short Cardigan",
+    "price": 49.95,
+    "quantity": 65,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/469428/item/usgoods_01_469428_3x4.jpg",
+    "description": "Comfortable, relaxed silhouette for any occasion."
+  },
+  {
+    "id": 11,
+    "title": "Waffle T-Shirt | Long-Sleeve",
+    "price": 29.95,
+    "quantity": 75,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/460318/item/usgoods_30_460318_3x4.jpg",
+    "description": "Soft and airy waffle fabric with a textured feel."
+  },
+  {
+    "id": 12,
+    "title": "Washable Milano Ribbed Crew Neck Sweater",
+    "price": 49.95,
+    "quantity": 85,
+    "image": "https://image.uniqlo.com/UQ/ST3/us/imagesgoods/453754/item/usgoods_07_453754_3x4.jpg",
+    "description": "A stretchy knit with a perfectly crisp feel. Machine-washable."
+  }
+]
