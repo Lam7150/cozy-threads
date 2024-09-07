@@ -1,8 +1,8 @@
 'use client';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Navbar } from '@/frontend/components/landing/Navbar';
-import { ProductGallery } from '@/frontend/components/landing/ProductGallery';
+import { Navbar } from '@/components/landing/Navbar';
+import { ProductGallery } from '@/components/landing/ProductGallery';
 
 const queryClient = new QueryClient();
 

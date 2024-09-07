@@ -6,8 +6,8 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchProducts } from '@/utils/api';
 
 // Components
-import { ProductCard } from '@/frontend/components/shared/ProductCard';
-import { ProductSheet } from '@/frontend/components/shared/ProductSheet';
+import { ProductCard } from '@/components/shared/ProductCard';
+import { ProductSheet } from '@/components/shared/ProductSheet';
 
 // Types
 import { Product } from '@/utils/types';

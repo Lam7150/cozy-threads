@@ -1,12 +1,12 @@
 'use client';
 
 // Libraries
-import { useCart } from '@/frontend/components/contexts/cart/useCart';
+import { useCart } from '@/components/contexts/cart/useCart';
 
 // Components
 import Image from 'next/image';
-import { Button } from '@/frontend/components/ui/button';
-import { Input } from '@/frontend/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import {
   Table,
   TableBody,
@@ -14,9 +14,9 @@ import {
   TableHead,
   TableHeader,
   TableRow
-} from '@/frontend/components/ui/table';
+} from '@/components/ui/table';
 import { Trash2 } from 'lucide-react';
-import { Navbar } from '@/frontend/components/landing/Navbar';
+import { Navbar } from '@/components/landing/Navbar';
 
 export default function Cart() {
   const { cart, updateItem, deleteItem } = useCart();
@@ -48,7 +48,8 @@ export default function Cart() {
                         <div className="flex items-center space-x-4">
                           <Image
                             src={item.image}
-                            alt={item.title}
+                            alt={`image of ${item.title}`}
+                            sizes="10vw"
                             width={80}
                             height={80}
                             className="rounded-md"

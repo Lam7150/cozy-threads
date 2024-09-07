@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 import Image from 'next/image';
-import { Card, CardContent } from '@/frontend/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import type { Product } from '@/utils/types';
 
 interface ProductCardProps {
@@ -19,7 +19,8 @@ export function ProductCard({ product, onClick }: ProductCardProps) {
       <div className="relative aspect-square">
         <Image
           src={image}
-          alt="Product Image"
+          alt={`image of ${title}`}
+          sizes="25vw"
           layout="fill"
           objectFit="cover"
           objectPosition="top"

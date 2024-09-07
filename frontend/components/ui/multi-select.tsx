@@ -9,14 +9,14 @@ import {
 } from 'lucide-react';
 
 import { cn } from '@/utils/cn';
-import { Separator } from '@/frontend/components/ui/separator';
-import { Button } from '@/frontend/components/ui/button';
-import { Badge } from '@/frontend/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger
-} from '@/frontend/components/ui/popover';
+} from '@/components/ui/popover';
 import {
   Command,
   CommandEmpty,
@@ -25,7 +25,7 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator
-} from '@/frontend/components/ui/command';
+} from '@/components/ui/command';
 
 /**
  * Variants for the multi-select component to handle different styles.
@@ -370,7 +370,7 @@ export const MultiSelect = React.forwardRef<
           <WandSparkles
             className={cn(
               'my-2 w-3 h-3 cursor-pointer text-foreground bg-background',
-              isAnimating ? '' : 'text-muted-foreground'
+              isAnimating ? '':'text-muted-foreground'
             )}
             onClick={() => setIsAnimating(!isAnimating)}
           />

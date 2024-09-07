@@ -2,18 +2,18 @@
 
 // Libraries
 import { useState } from 'react';
-import { useCart } from '@/frontend/components/contexts/cart/useCart';
+import { useCart } from '@/components/contexts/cart/useCart';
 
 // Components
 import Image from 'next/image';
-import { Input } from '@/frontend/components/ui/input';
+import { Input } from '@/components/ui/input';
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle
-} from '@/frontend/components/ui/sheet';
-import { Button } from '@/frontend/components/ui/button';
+} from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 // Types
 import type { Product } from '@/utils/types';
@@ -51,7 +51,8 @@ export function ProductSheet({ product, open, setOpen }: ProductSheetProps) {
           <div className="relative w-full aspect-square">
             <Image
               src={image}
-              alt="Product Image"
+              alt={`image of ${title}`}
+              sizes="25vw"
               layout="fill"
               objectFit="cover"
               objectPosition="top"
