@@ -13,6 +13,12 @@ export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [cart, setCart] = useState<Product[]>([]);
 
   const addItem = (item: Product) => {
+    const existingItem = cart.filter((curr) => curr.id === item.id)[0];
+    if (existingItem) {
+      updateItem(item.id, existingItem.quantity + item.quantity);
+      return;
+    }
+
     const newCart = [...cart, item];
 
     setCart(newCart);

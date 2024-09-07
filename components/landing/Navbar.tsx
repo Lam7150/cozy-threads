@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -37,13 +38,13 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container flex justify-between px-6 w-screen h-14">
           <NavigationMenuItem className="flex font-bold">
-            <a
+            <Link
               rel="noreferrer noopener"
               href="/"
               className="flex ml-2 text-xl font-bold"
             >
               Cozy Threads
-            </a>
+            </Link>
           </NavigationMenuItem>
 
           {/* mobile */}
@@ -63,7 +64,7 @@ export const Navbar = () => {
                 </SheetHeader>
                 <nav className="flex flex-col gap-2 justify-center items-center mt-4">
                   {routeList.map(({ href, label }: RouteProps) => (
-                    <a
+                    <Link
                       rel="noreferrer noopener"
                       key={label}
                       href={href}
@@ -71,7 +72,7 @@ export const Navbar = () => {
                       className={buttonVariants({ variant: 'ghost' })}
                     >
                       {label}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </SheetContent>
@@ -81,14 +82,14 @@ export const Navbar = () => {
           {/* desktop */}
           <nav className="hidden gap-2 md:flex">
             {routeList.map((route: RouteProps, i) => (
-              <a
+              <Link
                 rel="noreferrer noopener"
                 href={route.href}
                 key={i}
                 className={`text-[17px] ${buttonVariants({ variant: 'ghost' })}`}
               >
                 {route.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </NavigationMenuList>

@@ -1,6 +1,10 @@
 'use client';
 
+// Libraries
 import { useState } from 'react';
+import { useCart } from '@/components/contexts/cart/useCart';
+
+// Components
 import Image from 'next/image';
 import { Input } from '@/components/ui/input';
 import {
@@ -10,6 +14,8 @@ import {
   SheetTitle
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
+
+// Types
 import type { Product } from '@/utils/types';
 
 interface ProductSheetProps {
@@ -22,7 +28,18 @@ export function ProductSheet({ product, open, setOpen }: ProductSheetProps) {
   if (!product) return null;
 
   const [quantity, setQuantity] = useState<number>(1);
+  const { addItem } = useCart();
+
   const { title, description, image, price } = product;
+
+  const addItemToCart = () => {
+    addItem({
+      ...product,
+      quantity
+    });
+
+    setOpen(false);
+  };
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -59,7 +76,9 @@ export function ProductSheet({ product, open, setOpen }: ProductSheetProps) {
               className="w-20"
             />
           </div>
-          <Button className="w-full">Add to Cart</Button>
+          <Button className="w-full" onClick={addItemToCart}>
+            Add to Cart
+          </Button>
         </div>
       </SheetContent>
     </Sheet>
