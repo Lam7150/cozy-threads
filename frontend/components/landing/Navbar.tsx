@@ -1,6 +1,6 @@
-'use client';
+// 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import { FaCartShopping } from 'react-icons/fa6';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,31 +9,32 @@ import {
   NavigationMenuItem,
   NavigationMenuList
 } from '@/components/ui/navigation-menu';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger
-} from '@/components/ui/sheet';
+// import {
+//   Sheet,
+//   SheetContent,
+//   SheetHeader,
+//   SheetTitle,
+//   SheetTrigger
+// } from '@/components/ui/sheet';
 
-import { Button, buttonVariants } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
+// import { Button, buttonVariants } from '@/components/ui/button';
+// import { Menu } from 'lucide-react';
+import { buttonVariants } from '@/components/ui/button';
 
-interface RouteProps {
-  href: string;
-  label: string;
-}
+// interface RouteProps {
+//   href: string;
+//   label: string;
+// }
 
-const routeList: RouteProps[] = [
-  {
-    href: '/cart',
-    label: 'Cart'
-  }
-];
+// const routeList: RouteProps[] = [
+//   {
+//     href: '/cart',
+//     label: 'Cart'
+//   }
+// ];
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  // const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
@@ -58,7 +59,7 @@ export const Navbar = () => {
             </Link>
           </NavigationMenuItem>
 
-          {/* mobile */}
+          {/* mobile
           <span className="flex md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2" asChild>
@@ -80,7 +81,7 @@ export const Navbar = () => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={`${buttonVariants({ variant: 'ghost' })} text-secondary`}
+                      className={`${buttonVariants({ variant:'ghost'})} text-secondary`}
                     >
                       <span className="flex flex-row gap-1.5 items-center text-lg">
                         {label === 'Cart' ? <FaCartShopping /> : null}
@@ -91,23 +92,23 @@ export const Navbar = () => {
                 </nav>
               </SheetContent>
             </Sheet>
-          </span>
+          </span> */}
 
           {/* desktop */}
           <nav className="hidden gap-2 md:flex">
-            {routeList.map((route: RouteProps, i) => (
-              <Link
-                rel="noreferrer noopener"
-                href={route.href}
-                key={i}
-                className={`${buttonVariants({ variant: 'ghost' })} text-secondary`}
-              >
-                <span className="flex flex-row gap-1.5 items-center text-lg">
-                  {route.label === 'Cart' ? <FaCartShopping /> : null}
-                  {route.label}
-                </span>
-              </Link>
-            ))}
+            {/* {routeList.map((route: RouteProps, i) => ( */}
+            <Link
+              rel="noreferrer noopener"
+              href={'/cart'}
+              // key={i}
+              className={`${buttonVariants({ variant: 'ghost' })} text-secondary`}
+            >
+              <span className="flex flex-row gap-1.5 items-center text-lg">
+                <FaCartShopping />
+                {'Cart'}
+              </span>
+            </Link>
+            {/* ))} */}
           </nav>
         </NavigationMenuList>
       </NavigationMenu>
