@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Node.js Restful API with Node.js and Express",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "debug": "node --inspect-brk server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",

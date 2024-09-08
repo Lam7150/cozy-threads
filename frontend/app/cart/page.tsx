@@ -5,6 +5,7 @@ import { useCart } from '@/components/contexts/cart/useCart';
 
 // Components
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -109,7 +110,9 @@ export default function Cart() {
                     <span className="font-semibold">${total.toFixed(2)}</span>
                   </div>
                 </div>
-                <Button className="mt-4 w-full">Proceed to Checkout</Button>
+                <Link rel="noreferrer noopener" href="/checkout">
+                  <Button className="mt-4 w-full">Proceed to Checkout</Button>
+                </Link>
               </div>
             </div>
           </div>

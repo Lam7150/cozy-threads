@@ -1,5 +1,5 @@
 const stripe = require('stripe')(process.env.STRIPE_API_KEY);
-const CLIENT = process.env.VERCEL_URL || 'http://localhost:4242';
+const CLIENT = process.env.CLIENT_URL;
 
 module.exports = (app) => {
   // Create checkout session with embedded form
@@ -15,12 +15,12 @@ module.exports = (app) => {
           product_data: {
             name: item.title,
           },
-          unit_amount: item.price,
+          unit_amount: item.price * 100,
         },
         quantity: 1,
       })),
       mode: 'payment',
-      return_url: `${CLIENT}/return.html?session_id={CHECKOUT_SESSION_ID}`,
+      return_url: `${CLIENT}/return?session_id={CHECKOUT_SESSION_ID}`,
     });
 
     res.send({ clientSecret: session.client_secret });

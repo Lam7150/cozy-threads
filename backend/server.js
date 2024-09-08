@@ -19,7 +19,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 // env variables
-const PORT = process.env.PORT || 4242;
+const PORT = process.env.PORT;
 
 // simple route
 app.get('/', (req, res) => {
