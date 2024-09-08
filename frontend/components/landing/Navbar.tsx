@@ -51,6 +51,7 @@ export const Navbar = () => {
               height={64}
             />
             <Link
+              shallow
               rel="noreferrer noopener"
               href="/"
               className="flex self-center text-xl font-bold text-secondary"
@@ -100,6 +101,7 @@ export const Navbar = () => {
             <Link
               rel="noreferrer noopener"
               href={'/cart'}
+              shallow
               // key={i}
               className={`${buttonVariants({ variant: 'ghost' })} text-secondary`}
             >
