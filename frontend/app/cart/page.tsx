@@ -17,7 +17,6 @@ import {
   TableRow
 } from '@/components/ui/table';
 import { Trash2 } from 'lucide-react';
-import { Navbar } from '@/components/landing/Navbar';
 
 export default function Cart() {
   const { cart, updateItem, deleteItem } = useCart();
@@ -26,7 +25,6 @@ export default function Cart() {
 
   return (
     <>
-      {/* <Navbar /> */}
       <main className="container grid place-items-center">
         <div className="container px-4 py-8 mx-auto">
           <h1 className="mb-8 text-2xl font-bold">Your Shopping Cart</h1>
