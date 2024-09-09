@@ -15,7 +15,7 @@ export default function Return() {
     const urlParams = new URLSearchParams(queryString);
     const sessionId = urlParams.get('session_id');
 
-    const sessionStatus = fetchSessionStatus(sessionId).then((data) => {
+    fetchSessionStatus(sessionId).then((data) => {
       setStatus(data.status);
       setCustomerEmail(data.customer_email);
     });
