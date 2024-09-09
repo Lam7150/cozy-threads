@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Navbar } from '@/components/landing/Navbar';
 import { CartProvider } from '@/components/contexts/cart/CartProvider';
 import '@/styles/main.css';
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body>
+        <Navbar />
         <CartProvider>{children}</CartProvider>
       </body>
     </html>

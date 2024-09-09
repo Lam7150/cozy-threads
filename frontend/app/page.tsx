@@ -9,7 +9,7 @@ const queryClient = new QueryClient();
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <QueryClientProvider client={queryClient}>
         <main className="container grid place-items-center py-4">
           <ProductGallery />

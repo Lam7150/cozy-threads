@@ -26,7 +26,7 @@ export default function Cart() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="container grid place-items-center">
         <div className="container px-4 py-8 mx-auto">
           <h1 className="mb-8 text-2xl font-bold">Your Shopping Cart</h1>
