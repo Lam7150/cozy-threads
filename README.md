@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="./frontend/public/cozy_threads.png" alt="Cozy Threads Logo" width="200">
+  <img src="./public/cozy_threads.png" alt="Cozy Threads Logo" width="200">
   <br/>
   Cozy Threads
   </br>
@@ -29,6 +29,9 @@ The backend is built with Express to host the API in the /api folder for Vercel 
    - To install new project dependencies
 
 ### Website Preview
+![Screenshot 2024-09-09 at 12 24 00 PM](https://github.com/user-attachments/assets/29737510-81a4-4b39-b477-47435403d905)
+![Screenshot 2024-09-09 at 12 24 17 PM](https://github.com/user-attachments/assets/fa3fb4cc-1c58-4c31-a5d5-627b209a832f)
+
 
 ## Learn More
 
