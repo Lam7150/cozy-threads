@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Navbar } from '@/components/landing/Navbar';
-import { CartProvider } from '@/components/contexts/cart/CartProvider';
+import { CartProvider } from '@/components/contexts/cart-context';
 import '@/styles/main.css';
 
 const inter = Inter({

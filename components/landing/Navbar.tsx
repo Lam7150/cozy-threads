@@ -50,7 +50,6 @@ export const Navbar = () => {
               height={64}
             />
             <Link
-              shallow
               rel="noreferrer noopener"
               href="/"
               className="flex self-center text-xl font-bold text-secondary"

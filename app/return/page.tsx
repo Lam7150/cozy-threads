@@ -2,6 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { fetchSessionStatus } from '@/utils/api';
 
 export default function Return() {
   const [status, setStatus] = useState(null);
@@ -12,14 +15,10 @@ export default function Return() {
     const urlParams = new URLSearchParams(queryString);
     const sessionId = urlParams.get('session_id');
 
-    fetch(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/session-status?session_id=${sessionId}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setStatus(data.status);
-        setCustomerEmail(data.customer_email);
-      });
+    const sessionStatus = fetchSessionStatus(sessionId).then((data) => {
+      setStatus(data.status);
+      setCustomerEmail(data.customer_email);
+    });
   }, []);
 
   if (status === 'open') {
@@ -28,12 +27,42 @@ export default function Return() {
 
   if (status === 'complete') {
     return (
-      <section id="success">
-        <p>
-          We appreciate your business! A confirmation email will be sent to{' '}
-          {customerEmail}. If you have any questions, please email{' '}
-          <a href="mailto:orders@example.com">orders@example.com</a>.
-        </p>
+      <section
+        id="success"
+        className="flex justify-center items-center p-4 min-h-screen bg-gray-50"
+      >
+        <Card className="w-full max-w-md">
+          <CardHeader>
+            <CardTitle className="flex flex-row justify-center items-center text-2xl font-bold text-center text-primary">
+              <Image
+                src="/cozy_threads.png"
+                alt={`cozy threads logo`}
+                sizes="10vw"
+                layout="fit"
+                objectFit="cover"
+                width={64}
+                height={64}
+              />
+              Thank You!
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-center text-muted-foreground">
+              We appreciate your business! A confirmation email will be sent to{' '}
+              <span className="font-medium text-primary">{customerEmail}</span>.
+            </p>
+            <p className="mt-2 text-center text-muted-foreground">
+              If you have any questions, please email{' '}
+              <a
+                href="mailto:orders@example.com"
+                className="font-medium text-primary hover:underline"
+              >
+                orders@example.com
+              </a>
+              .
+            </p>
+          </CardContent>
+        </Card>
       </section>
     );
   }

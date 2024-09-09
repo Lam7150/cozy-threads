@@ -1,7 +1,7 @@
 'use client';
 
 // Libraries
-import { useCart } from '@/components/contexts/cart/useCart';
+import { useCart } from '@/components/contexts/cart-context';
 
 // Components
 import Image from 'next/image';

@@ -1,10 +1,26 @@
 'use client';
 
-import React, { useState } from 'react';
-
-import { CartContext } from '@/components/contexts/cart/CartContext';
+import React, { createContext, useContext, useState } from 'react';
 import { Product } from '@/utils/types';
 
+// Context
+interface CartContextType {
+  cart: Product[];
+  addItem: (item: Product) => void;
+  updateItem: (id: number, quantity: number) => void;
+  deleteItem: (id: number) => void;
+}
+
+const DEFAULT_CONTEXT: CartContextType = {
+  cart: [],
+  addItem: () => {},
+  updateItem: () => {},
+  deleteItem: () => {}
+};
+
+export const CartContext = createContext(DEFAULT_CONTEXT);
+
+// Provider
 type PropsWithChildren = {
   children?: React.ReactNode;
 };
@@ -54,4 +70,15 @@ export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+};
+
+// Hook
+export const useCart = () => {
+  const context = useContext(CartContext);
+
+  if (!context) {
+    throw new Error('useCart must be used within a CartProvider');
+  }
+
+  return context;
 };

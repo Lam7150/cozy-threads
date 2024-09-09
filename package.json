@@ -8,6 +8,7 @@
     "lint": "next lint",
     "start-client": "next build && next start",
     "start-server": "node api/index.js --ignore client",
+    "start-dev": "concurrently \"npm run dev\" \"npm run start-server\"",
     "start": "concurrently \"npm run start-client\" \"npm run start-server\""
   },
   "dependencies": {
