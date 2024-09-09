@@ -58,7 +58,8 @@ export const Navbar = () => {
               Cozy Threads
             </Link>
           </NavigationMenuItem>
-          mobile
+
+          {/* mobile */}
           <span className="flex md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2" asChild>
@@ -92,6 +93,7 @@ export const Navbar = () => {
               </SheetContent>
             </Sheet>
           </span>
+
           {/* desktop */}
           <nav className="hidden gap-2 md:flex">
             {routeList.map((route: RouteProps, i) => (
@@ -102,8 +104,8 @@ export const Navbar = () => {
                 className={`${buttonVariants({ variant: 'ghost' })} text-secondary`}
               >
                 <span className="flex flex-row gap-1.5 items-center text-lg">
-                  <FaCartShopping />
-                  {'Cart'}
+                  {route.label === 'Cart' ? <FaCartShopping /> : null}
+                  {route.label}
                 </span>
               </Link>
             ))}
