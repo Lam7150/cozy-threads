@@ -1,30 +1,11 @@
 'use client';
 
-import React, { useCallback } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
-import {
-  EmbeddedCheckoutProvider,
-  EmbeddedCheckout
-} from '@stripe/react-stripe-js';
-import { useCart } from '@/components/contexts/cart-context';
-import { fetchClientSecret as fetchClientSecretCall } from '@/utils/api';
+import { Checkout } from '@/components/landing/Checkout';
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_API_KEY || '');
-
-export default function Checkout() {
-  const { cart } = useCart();
-
-  const fetchClientSecret = useCallback(() => {
-    return fetchClientSecretCall(cart);
-  }, []);
-
-  const options = { fetchClientSecret };
-
+export default function CheckoutPage() {
   return (
-    <div id="checkout">
-      <EmbeddedCheckoutProvider stripe={stripePromise} options={options}>
-        <EmbeddedCheckout />
-      </EmbeddedCheckoutProvider>
-    </div>
+    <>
+      <Checkout />
+    </>
   );
 }

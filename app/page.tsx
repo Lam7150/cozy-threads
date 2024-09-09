@@ -5,7 +5,7 @@ import { ProductGallery } from '@/components/landing/ProductGallery';
 
 const queryClient = new QueryClient();
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
