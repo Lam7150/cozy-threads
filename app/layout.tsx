@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Navbar } from '@/components/landing/Navbar';
 import { CartProvider } from '@/components/contexts/cart-context';
+import { QueryClientProvider } from '@/components/contexts/query-context';
+import { PaymentProvider } from '@/components/contexts/payment-context';
+
 import '@/styles/main.css';
 
 const inter = Inter({
@@ -25,7 +28,11 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body>
         <Navbar />
-        <CartProvider>{children}</CartProvider>
+        <QueryClientProvider>
+          <PaymentProvider>
+            <CartProvider>{children}</CartProvider>
+          </PaymentProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );

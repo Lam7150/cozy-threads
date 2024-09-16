@@ -16,7 +16,26 @@ const fetchProducts = async () => {
   return response.json();
 };
 
-// Stripe endpoints
+// Stripe endpoints | Payments Element
+const fetchStripePK = () => {
+  return fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/config`)
+    .then((res) => res.json())
+    .then(({ publishableKey }) => publishableKey);
+};
+
+const createPaymentIntent = (cart: Product[]) => {
+  return fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/create-payment-intent`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ cart })
+  })
+    .then((res) => res.json())
+    .then(({ clientSecret }) => clientSecret);
+};
+
+// Stripe endpoints | EMBEDDED CHECKOUT
 const fetchClientSecret = (cart: Product[]) => {
   return fetch(
     `${process.env.NEXT_PUBLIC_SERVER_URL}/create-checkout-session`,
@@ -44,4 +63,10 @@ const fetchSessionStatus = async (sessionId: string | null) => {
   return response.json();
 };
 
-export { fetchProducts, fetchClientSecret, fetchSessionStatus };
+export {
+  fetchProducts,
+  fetchStripePK,
+  createPaymentIntent,
+  fetchClientSecret,
+  fetchSessionStatus
+};

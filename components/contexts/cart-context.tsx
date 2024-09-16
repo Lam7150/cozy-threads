@@ -1,6 +1,11 @@
 'use client';
 
-import React, { createContext, useContext, useState } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  PropsWithChildren
+} from 'react';
 import { Product } from '@/utils/types';
 
 // Context
@@ -19,11 +24,6 @@ const DEFAULT_CONTEXT: CartContextType = {
 };
 
 export const CartContext = createContext(DEFAULT_CONTEXT);
-
-// Provider
-type PropsWithChildren = {
-  children?: React.ReactNode;
-};
 
 export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [cart, setCart] = useState<Product[]>([]);
